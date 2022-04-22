@@ -88,15 +88,15 @@ public class Flipkart_task {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.close();
         driver.switchTo().window(parent);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         WebElement search=driver.findElement(searchbox);
         String item2=properties.getProperty("product2");
         search.sendKeys(Keys.CONTROL +"a");
         search.sendKeys(Keys.DELETE);
         search.sendKeys(item2); 
         action.sendKeys(Keys.ENTER).build().perform();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		wait.until(ExpectedConditions.presenceOfElementLocated(selectitem2));
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	wait.until(ExpectedConditions.presenceOfElementLocated(selectitem2));
         WebElement p2=driver.findElement(selectitem2);
         p2.click(); 
         String parent1=driver.getWindowHandle();
